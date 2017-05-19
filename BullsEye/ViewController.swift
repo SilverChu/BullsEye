@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var currentValue: Int = 0
+    var currentValue = 0
+    var targetValue = 0
+    var score = 0
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var targetLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // Initialize the slider's value.
+        startNewRound()
+        updateLabels()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,16 +29,31 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Popup the score you get
     @IBAction func showAlert() {
-        let message = "The value of the slider is: \(currentValue)"
+        let difference = abs(currentValue - targetValue)
+        let points = 100 - difference
+        score += points // add up every new round's points.
+        let message = "You scored \(points) points."
         let alert = UIAlertController(title: "Hello, World", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
+        startNewRound()
+        updateLabels()
     }
 
     @IBAction func sliderMoved(_ slider: UISlider) {
         currentValue = lroundf(slider.value)
+    }
+    
+    func startNewRound() {
+        targetValue = 1 + Int(arc4random_uniform(100))
+        slider.value = Float(currentValue)
+    }
+    
+    func updateLabels() {
+        targetLabel.text = String(targetValue) // s
     }
     
 }
