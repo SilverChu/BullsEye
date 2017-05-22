@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B1400FB1ED342E800378350 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1400FA1ED342E800378350 /* AboutViewController.swift */; };
 		7B77530D1EC59E490007C555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B77530C1EC59E490007C555 /* AppDelegate.swift */; };
 		7B77530F1EC59E490007C555 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B77530E1EC59E490007C555 /* ViewController.swift */; };
 		7B7753121EC59E490007C555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B7753101EC59E490007C555 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B1400FA1ED342E800378350 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		7B7753091EC59E490007C555 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B77530C1EC59E490007C555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B77530E1EC59E490007C555 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				7B77530C1EC59E490007C555 /* AppDelegate.swift */,
 				7B77530E1EC59E490007C555 /* ViewController.swift */,
+				7B1400FA1ED342E800378350 /* AboutViewController.swift */,
 				7B7753101EC59E490007C555 /* Main.storyboard */,
 				7B7753131EC59E490007C555 /* Assets.xcassets */,
 				7B7753151EC59E490007C555 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B1400FB1ED342E800378350 /* AboutViewController.swift in Sources */,
 				7B77530F1EC59E490007C555 /* ViewController.swift in Sources */,
 				7B77530D1EC59E490007C555 /* AppDelegate.swift in Sources */,
 			);
