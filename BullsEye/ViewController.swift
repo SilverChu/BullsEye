@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var targetValue = 0
     var score = 0
     var round = 0
+    
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -91,6 +92,13 @@ class ViewController: UIViewController {
     @IBAction func startOver() {
         startNewGame()
         updateLabels()
+        
+        let transition = CATransition()
+        transition.type = kCATransitionFade
+        transition.duration = 1
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        
+        view.layer.add(transition, forKey: nil)
     }
     
     func startNewRound() {
